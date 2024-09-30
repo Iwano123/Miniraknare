@@ -19,6 +19,7 @@ namespace Miniräknare
             Console.WriteLine("Ange andra talet: ");
             double num2 = Convert.ToDouble(Console.ReadLine());
 
+
             double result = 0;
             switch (operation)
             {
@@ -32,7 +33,10 @@ namespace Miniräknare
                     result = num1 * num2;
                     break;
                 case '/':
-                    result = num1 / num2;
+                    if (num1 != 0 || num2 != 0)
+                    {
+                        result = num1 / num2;
+                    }
                     break;
                 default:
                     Console.WriteLine("Ogiltig operation.");
